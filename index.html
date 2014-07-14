@@ -13,14 +13,18 @@
 	  var element = document.querySelector("#log_in").selectedIndex;
 	  var element_1 = document.getElementsByTagName("option")[element].value;
 	  if(element_1 == "on"){
-		     if(screen.width <= 600){
+		     if(screen.width >= 600){
 				  element_1 == "off";
-			      window.location = "http:/fishpond.site88.net/notes_body.html";
-				 
-				  }
-			 else
+				    testConnect();
+				
+			 }
+	 else
 			      alert("failed to connect because not support");
-		  }
+				  
+		                  }
+	  
+	
+ return false;
 	}
 </script>
 </head>
@@ -36,7 +40,7 @@
         <p style="font-size:12px; text-align:center; margin-top:20%;">Welcome dear, this program was design to give you what going on in Dar es salaam instute of technology, please put on the slide bellow</p>
         <p>
                <div data-role="fieldcontain"  style=" margin-left:30%;">
-      <select name="flipswitch" id="log_in" data-role="slider" onChange="trigger_fun();">
+      <select name="flipswitch" id="log_in" data-role="slider" onChange=" return trigger_fun();">
         <option value="off">Off</option>
         <option value="on">On</option>
       </select>
