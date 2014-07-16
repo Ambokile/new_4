@@ -10,19 +10,11 @@
 <script type="text/javascript" src="http://fishpond.site88.net/upload.js"></script>
 <script type="text/javascript">
  function trigger_fun(){
-	  var element = document.querySelector("#log_in").selectedIndex;
-	  var element_1 = document.getElementsByTagName("option")[element].value;
-	  if(element_1 == "on"){
 		     if(screen.width <= 600){
-				  element_1 == "off";
 				    testConnect();
-				
-			 }
-	 else
+				}
+	        else
 			      alert("failed to connect because not support");
-				  
-		                  }
-	  
 	
  return false;
 	}
@@ -36,16 +28,18 @@
   </div>
   <div data-role="content" style="background-color:transparent;">
    
-  
-        <p style="font-size:12px; text-align:center; margin-top:20%;">Welcome dear, this program was design to give you what going on in Dar es salaam instute of technology, please put on the slide bellow</p>
-        <p>
-               <div data-role="fieldcontain"  style=" margin-left:30%;">
-      <select name="flipswitch" id="log_in" data-role="slider" onChange=" return trigger_fun();">
-        <option value="off">Off</option>
-        <option value="on">On</option>
-      </select>
-    </div>
-        </p>
+  <div style=" width:50%; height:50%; border:#fff thin solid;margin:20% 20% 0% 20%;">
+       <div style=" margin:10% 20% 2% 30%;"><img src="img/dit.jpg" width="100" height="80" /></div>
+        <p style="font-size:12px; text-align:center; margin-top:2%; padding:2%; ">Welcome dear, this program was design to give you what going on at Dar es salaam instute of technology, please put on the slide below to log in</p>
+       <div style=" width:100%; background-color:transparent;">
+       <div data-role="navbar" data-grid="a">
+         <ul>
+            <li><a href="" onClick="trigger_fun()">news</a></li>
+            <li><a href="">chat</a></li>
+         </ul>
+         </div>
+       </div>
+        </div>
   </div>
 </div>
 
@@ -56,7 +50,7 @@
   <div data-role="content" style="background-color:#000; height:100%;">
    
   
-        <p style="font-size:14px; text-align:center; margin-top:20%;">Please make sure you have data connection, and try again</p>
+        <p style="font-size:14px; text-align:center; margin-top:20%; color:">Please make sure you have data connection, and try again</p>
   </div>
 </div>
 
