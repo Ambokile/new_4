@@ -9,37 +9,24 @@
 <script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://fishpond.site88.net/upload.js"></script>
 <script type="text/javascript">
-function onDeviceReady() {
-                             console.log("onDeviceReady");
-                                           }
- 
+ function onLoad() {
+	 alert();
+        document.addEventListener("online", onOnline, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    function onDeviceReady() {
+		         document.addEventListener("offline", onOffline, false);
+              }
+  function onOffline() {
+	   navigator.app.exitApp();
+    }
+	
+   
  function trigger_fun(){
 		     if(screen.width <= 600){ 
-			            function onDeviceReady() {
-                                     navigator.network.isReachable("google.com", reachableCallback, {});
-                                                                           }
-
-                      function reachableCallback(reachability) {
-  
-                                           var networkState = reachability.code || reachability;
-                                           var states = {};
-                                           states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
-                                           states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
-                                           states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
-                                if (networkState != 0) online = true;
-                                             }
-                                var online = false ||  navigator.onLine ;
-                  $(document).ready(function() { 
-                                      $(document).bind('deviceready', function(){
-                                                                         onDeviceReady(); })
-																					 })
-                                                   if(online) {
-                                                                  window.location = "http://fishpond.site88.net/notes_body.html";
-                                                              } else {
-																    alert("no data connection, please check and try again");
-                                                                             }
-				                    
-				}
+						     window.location = "http://fishpond.site88.net/notes_body.html";
+						   }
+					   
 	        else
 			      alert("failed to connect because not support");
 	
@@ -48,7 +35,7 @@ function onDeviceReady() {
 </script>
 </head>
 
-<body onLoad=" onDeviceReady()" onl>
+<body onLoad="onLoad();">
 <div data-role="page" id="page" data-theme="b" style="height:100%;">
   <div data-role="header">
     <h1>DIT NOTES BODY</h1>
