@@ -51,15 +51,8 @@ xmlhttp.send("msg="+msg+"&from="+from+"&ntb="+to_bd);
  return false;
 	}	 
    
- function trigger_fun(){
-		     if(screen.width <= 600){ 
-			      document.location = "#enter";
-			 }
-	        else
-			      alert("failed to connect because not support");
-	
- return false;
-	}
+
+
 </script>
 
 </head>
@@ -77,7 +70,7 @@ xmlhttp.send("msg="+msg+"&from="+from+"&ntb="+to_bd);
        <div style=" width:100%; background-color:transparent;">
        <div data-role="navbar" data-grid="a">
          <ul>
-            <li><a href="" onClick="trigger_fun()">news</a></li>
+            <li><a href="#enter">news</a></li>
             <li><a href="">chat</a></li>
          </ul>
          </div>
