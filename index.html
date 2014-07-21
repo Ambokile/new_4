@@ -66,7 +66,7 @@ function log_in(){
 		        alert("failed to log in");
 		 }
                                         };
-xmlhttp.open("GET","log_in.php?user="+user_name+"&pass="+password,true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/log_in.php?user="+user_name+"&pass="+password,true);
 xmlhttp.send();
 
 
@@ -89,7 +89,7 @@ window.onload = function(){
 		 
 		 }
                                         };
-xmlhttp.open("GET","getinfo.php",true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/getinfo.php",true);
 xmlhttp.send();
 
 
@@ -111,7 +111,7 @@ document.querySelector(".info").innerHTML = xmlhttp.responseText;
 		
 		 }
                                         };
-xmlhttp.open("GET","info.php",true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/info.php",true);
 xmlhttp.send();
 
 
@@ -133,7 +133,7 @@ xmlhttp.send();
 		 
 		 }
                                         };
-xmlhttp.open("GET","getUser.php",true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/getUser.php",true);
 xmlhttp.send();
 
 	}
@@ -152,7 +152,7 @@ xmlhttp.send();
 	 }
 			 
 			                       };
-xmlhttp.open("GET","get_info.php?str="+str,true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/get_info.php?str="+str,true);
 xmlhttp.send();
 	  }
   setTimeout(grap_gene_info,5);
@@ -171,7 +171,7 @@ document.querySelector(".info").innerHTML = xmlhttp.responseText;
 		
 		 }
                                         };
-xmlhttp.open("GET","info.php",true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/info.php",true);
 xmlhttp.send();
 
 
@@ -200,7 +200,7 @@ function getUser(){
 		   document.querySelector("#user_chat_room").innerHTML = xmlhttp.responseText;
 		 }
                                         };
-xmlhttp.open("GET","getUser.php",true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/getUser.php",true);
 xmlhttp.send();
 
 	}
@@ -225,7 +225,7 @@ xmlhttp.send();
 	 }
 			 
 			                       };
-url = "send_sms.php";
+url = "htttp://fishpond.site88.net/send_sms.php";
 xmlhttp.open("POST",url,true);
 xmlhttp.setRequestHeader("content-Type","application/x-www-form-urlencoded");
 xmlhttp.send("msg="+element+"&to="+element_+"&a="+1);
@@ -300,7 +300,7 @@ function grap_info(str,into){
 	 } 
 			 
 			                       };
-xmlhttp.open("GET","get_info.php?str="+str,true);
+xmlhttp.open("GET","htttp://fishpond.site88.net/get_info.php?str="+str,true);
 xmlhttp.send();
 
   return false;
@@ -334,7 +334,7 @@ xmlhttp.send();
 	 }
 			 
 			                       };
-	url = "dit_reg.php";
+	url = "htttp://fishpond.site88.net/dit_reg.php";
 xmlhttp.open("POST",url,true);
 xmlhttp.setRequestHeader("content-Type","application/x-www-form-urlencoded");
 xmlhttp.send("name="+element+"&user_name="+element_1+"&email="+element_2+"&birthday="+element_8+"&mobile="+element_7+"&reg_no="+element_9+"&department="+element_3_1+"&gender="+element_4_1+"&password="+element_6);
@@ -377,7 +377,7 @@ function send_info(){
 	 }
 			 
 			                       };
-url = "send_info.php";
+url = "htttp://fishpond.site88.net/send_info.php";
 xmlhttp.open("POST",url,true);
 xmlhttp.setRequestHeader("content-Type","application/x-www-form-urlencoded");
 xmlhttp.send("msg="+msg+"&from="+from+"&ntb="+to_bd);
